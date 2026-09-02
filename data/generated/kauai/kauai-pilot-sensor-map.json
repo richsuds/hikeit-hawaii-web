@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "proposed_for_shadow_validation",
+  "checked_at": "2026-08-30",
+  "sources": {
+    "rainfall": "NWS Honolulu RRA product; provisional automated reports",
+    "stream": "USGS Water Services active instantaneous-value inventory"
+  },
+  "routes": [
+    {
+      "trail_name": "Alakaʻi Swamp Trail",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["WKRH1", "KLOH1", "MCRH1", "WLGH1"],
+      "stream_sites": [],
+      "mapping_note": "Wet high-elevation Kōkeʻe/Alakaʻi regime. Gauge weighting and elevation response require shadow calibration."
+    },
+    {
+      "trail_name": "Pihea Trail",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["KLOH1", "WKRH1", "WLGH1"],
+      "stream_sites": [],
+      "mapping_note": "High-elevation northwestern rim; do not treat a nearby stream as a direct trail measurement."
+    },
+    {
+      "trail_name": "Awaʻawapuhi Trail",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["MKAH1", "PLRH1", "POPH1"],
+      "stream_sites": [],
+      "mapping_note": "Leeward ridge candidate set. Exact gauge coordinates and exposure weighting require verification."
+    },
+    {
+      "trail_name": "ʻIliau Nature Loop",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["POPH1", "WHGH1", "WMTH1"],
+      "stream_sites": [],
+      "mapping_note": "Lower Waimea Canyon control route; candidate set requires coordinate verification."
+    },
+    {
+      "trail_name": "Kukui Trail",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["POPH1", "WHGH1", "WMTH1"],
+      "stream_sites": ["16016000", "16031000"],
+      "mapping_note": "Stream sites describe Waimea River conditions, not the full canyon trail. Keep observational and do not label direct until hydrologic relevance is approved."
+    },
+    {
+      "trail_name": "Kuilau Trail",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["WLDH1", "WUHH1", "WIRH1"],
+      "stream_sites": ["16060950", "16068000"],
+      "mapping_note": "East-side Wailua candidate set; streams are watershed context only pending route-to-basin review."
+    },
+    {
+      "trail_name": "Nounou Trail (East)",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["KPIH1", "WUHH1", "WLDH1"],
+      "stream_sites": [],
+      "mapping_note": "East approach should remain distinct from west approach for access and rainfall calibration."
+    },
+    {
+      "trail_name": "Nounou Trail (West)",
+      "condition_mode": "RAINFALL_ESTIMATE",
+      "rain_gauge_ids": ["WUHH1", "WIRH1", "WLDH1"],
+      "stream_sites": [],
+      "mapping_note": "West approach mapping is provisional and must not inherit the east approach blindly."
+    },
+    {
+      "trail_name": "Hanakāpīʻai Day Route",
+      "condition_mode": "USGS_GAGE_HEIGHT_OBSERVATION",
+      "rain_gauge_ids": ["LLMH1", "WNHH1", "WIPH1", "HNIH1"],
+      "stream_sites": ["16114800"],
+      "stream_parameters": ["00065"],
+      "mapping_note": "USGS 16114800 is directly relevant but currently exposes gage height, not discharge. No user-facing threshold or safety interpretation is approved."
+    }
+  ]
+}

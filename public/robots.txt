@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /trail-summaries.json
+
+Sitemap: https://hikeithawaii.com/sitemap.xml
