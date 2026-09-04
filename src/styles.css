@@ -61,6 +61,7 @@ h1 { font-size: clamp(44px, 5.5vw, 76px); line-height: 1.02; letter-spacing: -3p
 .forecast-card { min-height: 190px; display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 20px 10px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 10px 28px #17362d0b; }
 .forecast-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; background: #e8f3f7; color: var(--water); }
 .forecast-card strong { font-family: 'Manrope'; }
+.forecast-card .forecast-date { color: var(--muted); font-family: 'Manrope'; font-size: 11px; font-weight: 700; }
 .forecast-card > span, .forecast-card > small { color: var(--muted); font-size: 12px; }
 .forecast-card .uv-badge { width: calc(100% - 6px); margin-top: auto; padding: 6px 4px; border-radius: 7px; color: var(--ink); font-size: 10px; font-weight: 800; text-align: center; }
 .forecast-card .temperatures { color: var(--ink); font-size: 22px; font-weight: 800; }
