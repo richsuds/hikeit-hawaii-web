@@ -317,7 +317,7 @@ export function OahuApp() {
       <section className="hero">
         <div className="hero-copy"><p className="eyebrow">PLAN WITH CURRENT CONDITIONS</p><h1>Know the conditions.<br />Plan ahead.</h1>
           <p className="hero-text">Weather, water flow, mud, UV, access details and official route information for Oʻahu hikes—all in one clear view.</p>
-          <a className="primary-button" href="#trails"><Footprints size={19} /> Explore {trails.length || 49} trail cards</a>
+          <a className="primary-button" href="#trails"><Footprints size={19} /> Explore trails</a>
           <p className="microcopy">Observations and estimates, never a declaration that a trail is “safe.”</p></div>
         <div className="hero-brand"><img src="/logo.png" alt="HikeIt Hawaii mountain and waterfall logo" /></div>
       </section>
