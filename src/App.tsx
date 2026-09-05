@@ -142,6 +142,16 @@ function InstagramMark() {
   </svg>;
 }
 
+function XMark() {
+  return <svg className="social-brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#000" /><path fill="#fff" d="M8 7h5.3l4.4 5.9L23 7h2l-6.4 7.4L25 25h-5.3l-4.8-6.4L9.3 25h-2l6.7-7.9L8 7Zm3 1.6 9.5 14.8H22L12.5 8.6H11Z" /></svg>;
+}
+function ThreadsMark() {
+  return <svg className="social-brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#000" /><path d="M22.9 15.2c-.3-5-3-7.6-7.2-7.6-4.6 0-7.4 3.3-7.4 8.5 0 5.3 2.8 8.4 7.7 8.4 4.3 0 7.1-2.2 7.1-5.4 0-2.8-2.2-4.6-5.6-4.6-3.1 0-5.3 1.6-5.3 4 0 2 1.6 3.3 3.8 3.3 2.8 0 4.5-2.1 4.5-5.6 0-4.2-1.7-6.3-5.1-6.3-2.2 0-3.9 1.2-4.7 3.2" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" /></svg>;
+}
+function TikTokMark() {
+  return <svg className="social-brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#000" /><path d="M18 7v11.2a4.7 4.7 0 1 1-4-4.6" fill="none" stroke="#25F4EE" strokeWidth="3.2" strokeLinecap="round" /><path d="M19.6 7.3c.6 3.2 2.4 5 5.3 5.5" fill="none" stroke="#FE2C55" strokeWidth="3.2" strokeLinecap="round" /><path d="M18.8 7v11.2a4.7 4.7 0 1 1-4-4.6M19 7.3c.6 3.2 2.4 5 5.3 5.5" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" /></svg>;
+}
+
 export function OahuApp() {
   const [trails, setTrails] = useState<TrailCondition[]>([]);
   const [routeDetail, setRouteDetail] = useState<TrailCondition | null>(null);
@@ -315,7 +325,14 @@ export function OahuApp() {
       <section className="app-download" aria-labelledby="app-download-title">
         <div className="app-download-icon"><Smartphone aria-hidden="true" /></div>
         <div className="app-download-copy"><p className="eyebrow dark">STAY CONNECTED</p><h2 id="app-download-title">Follow us—and take trail conditions on the go</h2><p>Follow HikeIt Hawaii for trail inspiration and updates, then use the iPhone or Android app for weather, UV guidance, trail maps, water-flow estimates and access details wherever you plan.</p>
-          <nav className="download-socials" aria-label="HikeIt Hawaii social media"><a href="https://www.facebook.com/HikeitHawaii/" target="_blank" rel="noreferrer" aria-label="Follow HikeIt Hawaii on Facebook" onClick={() => trackEvent('social_click', { platform: 'facebook' })}><FacebookMark /> Facebook</a><a href="https://www.instagram.com/hikeithawaii/" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on Instagram" onClick={() => trackEvent('social_click', { platform: 'instagram' })}><InstagramMark /> @hikeithawaii</a><a href="mailto:hikeithawaii@gmail.com?subject=HikeIt%20Hawaii%20question" onClick={() => trackEvent('contact_click', { method: 'email' })}><Mail /> Email us</a></nav></div>
+          <nav className="download-socials" aria-label="HikeIt Hawaii social media">
+            <a href="https://www.facebook.com/HikeitHawaii/" target="_blank" rel="noreferrer" aria-label="Follow HikeIt Hawaii on Facebook" onClick={() => trackEvent('social_click', { platform: 'facebook' })}><FacebookMark /> Facebook</a>
+            <a href="https://www.instagram.com/hikeithawaii/" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on Instagram" onClick={() => trackEvent('social_click', { platform: 'instagram' })}><InstagramMark /> Instagram</a>
+            <a href="https://x.com/hikeithawaii" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on X" onClick={() => trackEvent('social_click', { platform: 'x' })}><XMark /> X</a>
+            <a href="https://www.threads.net/@hikeithawaii" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on Threads" onClick={() => trackEvent('social_click', { platform: 'threads' })}><ThreadsMark /> Threads</a>
+            <a href="https://www.tiktok.com/@hikeithawaii" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on TikTok" onClick={() => trackEvent('social_click', { platform: 'tiktok' })}><TikTokMark /> TikTok</a>
+            <a href="mailto:hikeithawaii@gmail.com?subject=HikeIt%20Hawaii%20question" onClick={() => trackEvent('contact_click', { method: 'email' })}><Mail /> Email us</a>
+          </nav></div>
         <div className="store-actions">
           {iosBetaUrl ? <a className="store-button" href={iosBetaUrl} target="_blank" rel="noreferrer" onClick={() => trackEvent('app_download_click', { platform: 'ios' })}><AppleStoreMark /><span><small>Download on the</small><strong>App Store</strong></span></a> : <span className="store-button pending"><AppleStoreMark /><span><small>Coming soon on the</small><strong>App Store</strong></span></span>}
           {androidBetaUrl ? <a className="store-button" href={androidBetaUrl} target="_blank" rel="noreferrer" onClick={() => trackEvent('app_download_click', { platform: 'android' })}><GooglePlayMark /><span><small>GET IT ON</small><strong>Google Play</strong></span></a> : <span className="store-button pending"><GooglePlayMark /><span><small>COMING SOON ON</small><strong>Google Play</strong></span></span>}
