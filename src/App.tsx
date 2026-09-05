@@ -329,6 +329,7 @@ export function OahuApp() {
             <a href="https://www.facebook.com/HikeitHawaii/" target="_blank" rel="noreferrer" aria-label="Follow HikeIt Hawaii on Facebook" onClick={() => trackEvent('social_click', { platform: 'facebook' })}><FacebookMark /> Facebook</a>
             <a href="https://www.instagram.com/hikeithawaii/" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on Instagram" onClick={() => trackEvent('social_click', { platform: 'instagram' })}><InstagramMark /> Instagram</a>
             <a href="https://x.com/hikeithawaii" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on X" onClick={() => trackEvent('social_click', { platform: 'x' })}><XMark /> X</a>
+            <span className="social-row-break" aria-hidden="true" />
             <a href="https://www.threads.net/@hikeithawaii" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on Threads" onClick={() => trackEvent('social_click', { platform: 'threads' })}><ThreadsMark /> Threads</a>
             <a href="https://www.tiktok.com/@hikeithawaii" target="_blank" rel="noreferrer" aria-label="Follow @hikeithawaii on TikTok" onClick={() => trackEvent('social_click', { platform: 'tiktok' })}><TikTokMark /> TikTok</a>
             <a href="mailto:hikeithawaii@gmail.com?subject=HikeIt%20Hawaii%20question" onClick={() => trackEvent('contact_click', { method: 'email' })}><Mail /> Email us</a>
